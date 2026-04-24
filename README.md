@@ -16,7 +16,9 @@ TAs: Ermis-Ioannis Michail Delopoulos & Sriya Veerapaneni
 Day 1: Shiny core concepts
 
 - Lecture 1: Overview
-  - *Code exercise:* [L1_hello_github](/code_exercises/L1_hello_github_app.R)
+  - *Code exercise:* [L1_quiz_1](/code_exercises/L1_df_app.R)
+  - *Code exercise:* [L1_quiz_2](/code_exercises/L1_plot_app.R)
+  - *Code exercise:* [L1_quiz_3](/code_exercises/L1_rev_comp_app.R)
  
 - Lecture 2: User Interface (UI)
   - *Code exercise:* [L2_example_1](/code_exercises/L2_example_1_app.R)
