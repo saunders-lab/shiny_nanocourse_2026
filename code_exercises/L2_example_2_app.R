@@ -35,25 +35,24 @@ ui <- ## TODO
 server <- function(input, output){
   # OPTIONAL: match the plot themes with the overall app theme using thematic
   
+  # Render a histogram of the 'faithful$waiting' variable
   output$hist <- renderPlot({
-    x<- faithful$waiting
-    hist(x, breaks = ## Enter user input for bins
-           main = paste("Histograms of Waiting times with ",
-                        ## Enter user input for bins, 
-                        " bins") , 
+    x <- faithful$waiting  # Use the 'waiting' column from the built-in 'faithful' dataset
+    hist(x,
+         breaks = input$bins,  # Use the number of bins selected by the user
+         main = paste("Histogram of Waiting Times with", input$bins, "bins"),
          col = 'blue')
   })
   
+  # Render the selected number from the radio buttons
   output$print <- renderPrint({
-    paste("Selected number ", 
-          ## Enter user input for number 
-    )
+    paste("Selected number", input$num)
   })
   
-  output$summary <-renderTable({
-    dataset <- get( ## Enter user input for dataset, 
-      "package:datasets")
-    head(dataset)
+  # Render the first few rows of the selected dataset
+  output$summary <- renderTable({
+    dataset <- get(input$data, "package:datasets")  # Load the selected dataset from the 'datasets' package
+    head(dataset)  # Show the first 6 rows
   })
 }
 

@@ -12,7 +12,7 @@ library(shiny)
 ui <- fluidPage(
   
   ## TODO
-  ## 1. define a slider that decides how many bins are present in the plotted histogram
+  ## 1. Define a slider that decides how many bins are present in the plotted histogram
   
   ## 2. Define a user input where user can select one option from 
   ##     multiple pre-specified numbers 
@@ -41,21 +41,21 @@ ui <- fluidPage(
 server <- function(input, output){
   output$hist <- renderPlot({
     x<- faithful$waiting
-    hist(x, breaks = ## Enter user input for bins
+    hist(x, breaks = ## TODO Enter user input for bins
          main = paste("Histograms of Waiting times with ",
-                      ## Enter user input for bins, 
+                      ## TODO Enter user input for bins, 
                       " bins") , 
          col = 'darkgreen')
   })
   
   output$print <- renderPrint({
     paste("Selected number ", 
-          ## Enter user input for number 
+          ## TODO Enter user input for number 
           )
   })
   
   output$summary <-renderTable({
-    dataset <- get( ## Enter user input for dataset, 
+    dataset <- get( ## TODO Enter user input for dataset, 
                    "package:datasets")
     head(dataset)
   })
